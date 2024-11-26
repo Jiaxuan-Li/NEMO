@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEMO</title>
+
+  <link rel="icon" href="./static/images/nemo-logo.png">
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/leaderboard.css">
+  <link rel="stylesheet" href="./static/css/video-player.css">
+
+  <script type="text/javascript" src="static/js/sort-table.js" defer></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/explorer-index.js"></script>
+  <script src="./static/js/question_card.js"></script>
+
+  <script src="./static/js/leaderboard_testmini.js"></script>  
+  <script src="./data/results/output_folders.js" defer></script>
+  <script src="./data/results/model_scores.js" defer></script>
+
+  <script src="./visualizer/data/data_public.js" defer></script>
+
+  <style>
+    .no-sort {
+        cursor: default;
+        pointer-events: none;
+        background-image: none !important; /* Remove the sort arrow */
+    }
+  </style>
+
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <!-- <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <p style="font-size:18px; display: inline; margin-right: -2px; margin-top: 12px;">🔥</p>
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://github.com/BradyFU/Video-MME">
+            <b>Video-MME</b> 
+          </a>
+          <a class="navbar-item" href="https://github.com/Leon1207/3DRefTR">
+            <b>3DRefTR</b> 
+          </a>
+          <a class="navbar-item" href="https://github.com/Leon1207/3DGCTR">
+            <b>3DGCTR</b> 
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div> -->
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title is-bold">
+            <span class="video-mme" style="vertical-align: middle">NEMO</span>
+            </h1>
+          <h2 class="subtitle is-3 publication-subtitle", style="margin-bottom: 20px;">
+            Can Multimodal LLMs Identify Attribute-Modified Objects?
+          </h2>
+          
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="https://jiaxuan-li.github.io/">Jiaxuan Li</a><sup style="color:#6fbf73;">1</sup></span>
+            <span class="author-block"><a href="https://github.com/Jiaxuan-Li/NEMO">Junwen Mo</a><sup style="color:#6fbf73;">1</sup></span>
+            <span class="author-block"><a href="https://vmdlab.github.io/">MinhDuc Vo</a><sup style="color:#6fbf73;">1</sup></span>
+            <span class="author-block"><a href="http://research.nii.ac.jp/~sugimoto/index.html">Akihiro Sugimoto</a><sup style="color:#ed4b82">2</sup></span>
+            <span class="author-block"><a href="http://www.nlab.ci.i.u-tokyo.ac.jp/index-e.html">Hideki Nakayama</a><sup style="color:#6fbf73;">1</sup></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup style="color:#6fbf73;">1</sup>The University of Tokyo,</span>
+            <span class="author-block"><sup style="color:#ed4b82">2</sup>National Institute of Informatics</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://github.com/Jiaxuan-Li/NEMO"
+                   class="external-link button is-normal is-rounded is-dark">
+                <!-- <a href="https://lupantech.github.io/papers/arxiv23_mathvista.pdf"
+                   class="external-link button is-normal is-rounded is-dark"> -->
+                  <span class="icon">
+                      <i class="fas fa-file-alt"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/Jiaxuan-Li/NEMO"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/Jiaxuan-Li/NEMO"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fa fa-database"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+              </span>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container" style="margin-bottom: 2vh; margin-top: -70px;">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Introduction</h2>
+        <div class="content has-text-justified">
+          Multimodal Large Language Models (MLLMs) have made notable advances in visual understanding, 
+          yet their abilities to recognize objects modified by specific attributes remain an open question. 
+          To address this, we explore MLLMs' reasoning capabilities in object recognition, ranging from commonsense to beyond-commonsense scenarios. 
+          We introduce a novel benchmark, NEMO, which comprises 900 images of origiNal fruits and their corresponding attributE-MOdified ones; 
+          along with a set of 2,700 questions including open-, multiple-choice-, unsolvable types. 
+          We assess 26 recent open-sourced and commercial models using our benchmark. 
+          The findings highlight pronounced performance gaps in recognizing objects in NEMO and reveal distinct answer preferences across different models. 
+          Although stronger vision encoders improve performance, MLLMs still lag behind standalone vision encoders. 
+          Interestingly, scaling up the model size does not consistently yield better outcomes, as deeper analysis reveals that larger LLMs can weaken vision encoders during fine-tuning. 
+          These insights shed light on critical limitations in current MLLMs and suggest potential pathways toward developing more versatile and resilient multimodal models.
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+</div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    updateRowNumbers();
+    document.querySelector("#results").addEventListener("click", updateRowNumbers);
+  });
+
+  function updateRowNumbers() {
+    const rows = document.querySelectorAll("#results tbody tr");
+    rows.forEach((row, index) => {
+      row.querySelector("td").innerText = index + 1;
+    });
+  }
+  
+</script>
+
+
+<!-- DATASET SECTION -->
+<!-- <section class="hero is-light is-small">
+  <div class="hero-body has-text-centered">
+  <h1 class="title is-1 mathvista_other">
+    <span class="mathvista_other" style="vertical-align: middle">NEMO</span>
+  </h1>
+  </div>
+</section>
+             -->
+<section class="section">
+  <div class="container">
+
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content has-text-centered">
+
+  
+          <div class="columns is-centered m-6">
+            <div class="column is-full has-text-centered content">
+              <h2 class="title is-3">Highlights</h2>
+                <div class="box m-5">
+                  <div class="content has-text-centered">
+                    <div style="display: flex; justify-content: center;">
+                      <img src="static/images/fig1_teaser.png" alt="grade-lv" style="width: 100%;"/>
+                    </div>
+                    <p style="text-align: left; margin-left: auto; margin-right: auto; width: 95%;"> 
+                      Challenges in consistently identifying original and attribute-modified objects are illustrated in (a) and (b): 
+                      while LLaVA-NeXT-Qwen-32B and GPT-4o correctly recognize the original "mango", both fail with a blue variant. 
+                      Panels (c) and (d) show average accuracy scores of LLaVA-NeXT-Qwen-32B and GPT-4o across objects in our NEMO, comparing original and attribute-modified versions. 
+                      (e) provides a comparative overview of average scores for representative MLLMs on original (upper) and attribute-modified (lower) objects. </p>
+                  </div>
+                </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+</section>
+
+
+</section>
+<section class="hero is-light is-small">
+  <div class="hero-body has-text-centered">
+    <h1 class="title is-1 mathvista_other" id="citation">Citation</h1>
+  </div>
+</section>
+
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <pre><code>
+</code></pre>
+  </div>
+</section> -->
+
+
+<section class="section">
+  <div class="container" style="width: 60%;">
+  <style>
+      pre {
+        background-color: #f4f4f4;
+        padding: 5px; /* 调整padding为5px */
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        overflow-x: auto; /* 允许水平滚动 */
+    }
+    code {
+        font-family: Consolas, "Courier New", monospace;
+        color: #d63384; /* 代码文本颜色 */
+    }
+  </style>
+
+
+  </div>
+</section>
+
+<footer class="footer">
+  <!-- <div class="container"> -->
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p style="text-align: center;">
+            This website is adapted from <a href="https://github.com/BradyFU/Video-MME">Video-MME</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  <!-- </div> -->
+</footer>
+
+</body>
+  
+</html>
+
