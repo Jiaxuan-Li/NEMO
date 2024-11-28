@@ -1,2 +1,2 @@
 # NEMO
-NEMO : Can Multimodal LLMs Identify Attribute-Modified Objects?
+NEMO: Can Multimodal LLMs Identify Attribute-Modified Objects?
